@@ -1,7 +1,4 @@
-export { imageTamplate };
-//----------------------------------
-
-function createMarkup({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) {
+export function createMarkup({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) {
   return `
     <li class="gallery-item">
       <a class="gallery-link" href="${largeImageURL}">
@@ -17,6 +14,6 @@ function createMarkup({ webformatURL, largeImageURL, tags, likes, views, comment
   `;
 }
 
-function imageTamplate(arr) {
+export function imageTemplate(arr) {
   return arr.map(createMarkup).join('');
 }
